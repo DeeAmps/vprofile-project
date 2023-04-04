@@ -6,7 +6,7 @@ pipeline {
     agent any
 
     environment {
-        SNAP-REPO = "vprofile-snapshot"
+        SNAP_REPO = "vprofile-snapshot"
         NEXUS_USER = credentials('nexuslogin').username
         NEXUS_PASS = credentials('nexuslogin').password
         RELEASE_REPO = "vprofile-release"
