@@ -7,8 +7,9 @@ pipeline {
 
     environment {
         SNAP_REPO = "vprofile-snapshot"
-        NEXUS_USER = credentials('nexuslogin').username
-        NEXUS_PASS = credentials('nexuslogin').password
+        NEXUS_CREDS = credentials('nexuslogin')
+        NEXUS_USER = "${NEXUS_CREDS_USERNAME}"
+        NEXUS_PASS = "${NEXUS_CREDS_PASSWORD}"
         RELEASE_REPO = "vprofile-release"
         CENTRAL_REPO = "vprofile-maven-central"
         NEXUSIP = "54.224.162.51"
